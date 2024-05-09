@@ -78,7 +78,7 @@ a:hover {
     font-style: italic;
     font-size: 0.9rem;
 }
-
+ 
 .logo {
     font-size: 3.6rem;
     margin-bottom: 0;
@@ -94,6 +94,9 @@ a:hover {
 .padded4rem {padding: 4rem;}
 .padded1 {padding:1%}
 .padded5 {padding:5%}
+.bg-padded {
+    padding-bottom: 30%;
+} /* just to ajust the position of the image */
 
 .fa-brands {
     font-size: 2rem;
@@ -107,7 +110,6 @@ a:hover {
 
 .bg-bed {
     background-image: url("images/the-bunker-1.jpg");
-    border: 5vw solid rgb(53, 53, 54);
 }
 
 .bg-lounge {
@@ -146,4 +148,39 @@ a:hover {
 
 .bg-pos-roof {
     background-position: 50% 23%;
+}
+
+/* ------------ media queries and styles ---------------- */
+@media(max-width: 48em) {
+    /* .bg-sheets {display: none;} ODER -> */
+    .hide-sm {display:none;}
+
+    .flex-flip-sm { 
+        flex-direction: column-reverse;
+    }
+
+    .socialbanner {
+        background-image: none;
+        background-color: rgb(53, 53, 54);
+        text-align: left;
+        padding: 8%;
+    }
+
+    h1 {font-size: 4.5rem;} /* needed because the text on smaller devices breaks its container (leaves big white frame on the right) and therefore breaks the page -> same in footer "the bunker" also needs to be smaller to not break */
+
+    .logo {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    footer h4,
+    footer a {
+        text-align: center;
+        display: block; /* für links benötigt damit sie sich zentrieren lassen */
+    }
+
+    .tall {min-height: 35vh;}
+    .vh50 {min-height: 25vh;}
+    .padded5 {padding: 8%;}
+    /* .padded4rem {padding-right: 1rem;} */
 }
